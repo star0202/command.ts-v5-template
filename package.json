@@ -15,6 +15,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "dev": "ts-node --swc src"
+    "dev": "ts-node --swc src",
+    "start": "node dist"
   }
 }
