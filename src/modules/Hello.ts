@@ -8,6 +8,11 @@ class HelloExtension extends Extension {
     await this.commandClient.fetchOwners()
   }
 
+  @listener({ event: 'applicationCommandInvokeError', emitter: 'cts' })
+  async errorHandler(err: Error) {
+    this.logger.error(err)
+  }
+
   @applicationCommand({
     name: "ping",
     type: ApplicationCommandType.ChatInput,
