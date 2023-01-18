@@ -3,7 +3,7 @@
 This is a template of discord bot made with [@pikokr/command.ts](https://github.com/pikokr/command.ts) v5 with slash commands.
 
 ## Creating an App
-You’ll need to have Node 14.0.0 or later version on your local development machine (but it’s not required on the server). We recommend using the latest LTS version. You can use nvm (macOS/Linux) or nvm-windows to switch Node versions between different projects.
+You’ll need to have Node 16.9.0 or later version on your local development machine (but it’s not required on the server). We recommend using the latest LTS version. You can use nvm (macOS/Linux) or nvm-windows to switch Node versions between different projects.
 To create a new app, you should use [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b).
 ```shell
 npx degit pikokr/command.ts-v5-template my-app
