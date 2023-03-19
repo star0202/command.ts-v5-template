@@ -1,19 +1,19 @@
+import { config } from '../config'
 import {
-  applicationCommand,
   CommandClient,
   Extension,
+  applicationCommand,
   ownerOnly,
-} from "@pikokr/command.ts"
-import { ApplicationCommandType, ChatInputCommandInteraction } from "discord.js"
-import path from "path"
-import { config } from "../config"
+} from '@pikokr/command.ts'
+import { ApplicationCommandType, ChatInputCommandInteraction } from 'discord.js'
+import path from 'path'
 
 class DevModule extends Extension {
   @ownerOnly
   @applicationCommand({
     type: ApplicationCommandType.ChatInput,
-    name: "reload",
-    description: "reload modules",
+    name: 'reload',
+    description: 'reload modules',
   })
   async reload(i: ChatInputCommandInteraction) {
     await i.deferReply()
@@ -32,7 +32,7 @@ export class CustomizedCommandClient extends CommandClient {
     await this.registry.registerModule(new DevModule())
 
     await this.registry.loadAllModulesInDirectory(
-      path.join(__dirname, "..", "modules")
+      path.join(__dirname, '..', 'modules')
     )
   }
 }

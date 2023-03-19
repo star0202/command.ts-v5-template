@@ -1,8 +1,8 @@
-import { applicationCommand, Extension, listener } from "@pikokr/command.ts"
-import { ApplicationCommandType, ChatInputCommandInteraction } from "discord.js"
+import { Extension, applicationCommand, listener } from '@pikokr/command.ts'
+import { ApplicationCommandType, ChatInputCommandInteraction } from 'discord.js'
 
 class HelloExtension extends Extension {
-  @listener({ event: "ready" })
+  @listener({ event: 'ready' })
   async ready() {
     this.logger.info(`Logged in as ${this.client.user!.tag}`)
     await this.commandClient.fetchOwners()
@@ -14,9 +14,9 @@ class HelloExtension extends Extension {
   }
 
   @applicationCommand({
-    name: "ping",
+    name: 'ping',
     type: ApplicationCommandType.ChatInput,
-    description: "wow this is ping",
+    description: 'wow this is ping',
   })
   async ping(i: ChatInputCommandInteraction) {
     await i.reply(`current ping: ${i.client.ws.ping}ms`)
