@@ -18,5 +18,6 @@
     "build": "tsc",
     "dev": "ts-node --swc src",
     "start": "node dist"
-  }
+  },
+  "packageManager": "pnpm@7.30.0"
 }
