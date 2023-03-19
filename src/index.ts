@@ -1,5 +1,4 @@
 import { Client } from "discord.js"
-import path from "path"
 import { config } from "./config"
 import { CustomizedCommandClient } from "./structures"
 
